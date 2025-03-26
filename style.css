@@ -1,0 +1,425 @@
+/* Importing my fonts from Google Font*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+
+/* Reset and base styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
+
+/* Common utility classes */
+.material-symbols-outlined {
+	padding: 10px;
+}
+
+.small-icon {
+	color: black;
+	font-size: 1.1rem;
+}
+
+/* Hover and tooltip styles */
+.hover:hover {
+	background: #f1f3f4;
+	color: black;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.tooltip {
+	position: relative;
+	display: inline;
+}
+
+.tooltip-text {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	font-size: 0.78rem;
+	background-color: #323232;
+	color: white;
+	opacity: 0.8;
+	padding: 5px;
+	white-space: nowrap;
+	border-radius: 5px;
+	visibility: hidden;
+	z-index: 1;
+}
+
+.tooltip:hover .tooltip-text {
+	visibility: visible;
+}
+
+/* Navbar styles */
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 64px;
+	border-bottom: 1px solid #dadce0;
+	padding: 8px;
+	margin: 0 10px;
+	color: #5f6368;
+}
+
+.logo-area {
+	display: flex;
+	align-items: center;
+}
+
+.logo-text {
+	font-size: 1.2rem;
+}
+
+.search-area {
+	background: #f1f3f4;
+	flex: 1;
+	height: 48px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	margin: 0 10px;
+}
+
+.search-area input {
+	border: none;
+	background: #f1f3f4;
+	width: 100%;
+	height: 95%;
+	font-size: 1rem;
+	margin: 0 10px;
+}
+
+.settings-area,
+.profile-actions-area {
+	display: flex;
+	align-items: center;
+}
+
+.settings-area .tooltip,
+.profile-actions-area .tooltip {
+	margin-left: 10px;
+}
+
+/* Sidebar styles */
+.sidebar {
+	position: fixed;
+	left: 0;
+	top: 64px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 5px;
+	color: #5f6368;
+	width: 80px;
+	overflow-x: hidden;
+	transition: 0.8s;
+	height: calc(100% - 64px);
+	z-index: 1000;
+}
+
+.sidebar-hover {
+	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+		0 2px 6px 2px rgba(60, 64, 67, 0.149);
+	background: white;
+}
+
+.sidebar .sidebar-item {
+	padding: 3px 0;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.sidebar-item .sidebar-text {
+	color: black;
+	font-size: 0.9rem;
+	margin-left: 20px;
+	width: 250px;
+}
+
+.sidebar-item .material-symbols-outlined {
+	margin-left: 18px;
+}
+
+.sidebar-item:hover {
+	background: #f1f3f4;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+/* Active states */
+.active {
+	background-color: #fef0c3;
+	border-radius: 50%;
+	color: black;
+}
+
+.active:hover {
+	background-color: #fef0c3;
+}
+
+.sidebar-active-item {
+	background-color: #fef0c3;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+/* Form styles */
+.form-container {
+	background: #fff;
+	max-width: 598px;
+	margin: 32px auto;
+	border: 1px solid #e0e1e0;
+	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+		0 2px 6px 2px rgba(60, 64, 67, 0.149);
+	border-radius: 8px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 10px;
+}
+
+.form-container form {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	color: #5f6368;
+}
+
+.form-container form input {
+	border: none;
+	font-size: 1rem;
+	height: 100%;
+	padding: 10px;
+	width: 100%;
+	margin-right: 10px;
+	padding-left: 10px;
+}
+
+.form-container form .form-actions {
+	display: flex;
+	align-items: center;
+}
+
+.form-container form .form-actions .tooltip {
+	margin-left: 10px;
+}
+
+.active-form {
+	display: none;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 10px;
+}
+
+.form .form-actions .icons {
+	display: flex;
+}
+
+.form .form-actions {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 5px;
+}
+
+.form-actions .icons {
+	display: flex;
+}
+
+.close-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+.active-form {
+	display: none;
+}
+
+/* Notes styles */
+.notes {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 0 50px;
+}
+
+.note {
+	background-color: white;
+	margin: 10px;
+	width: 280px;
+	border: 1px solid #e0e1e0;
+	border-radius: 8px;
+	position: relative;
+	cursor: pointer;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.note:hover {
+	box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+		0 2px 6px 2px rgba(60, 64, 67, 0.149);
+}
+
+.note .title {
+	width: 100%;
+	margin: 15px 0 0 15px;
+}
+
+.note .text {
+	width: 100%;
+	margin: 10px 0 0 15px;
+}
+
+.note .note-footer {
+	margin-top: 15px;
+	display: flex;
+	padding: 0;
+	justify-content: center;
+	visibility: hidden;
+}
+
+.note:hover .note-footer {
+	visibility: visible;
+}
+
+.note-footer .material-symbols-outlined {
+	color: #5f6368;
+	font-size: 0.9rem;
+}
+
+.note .check-circle {
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	visibility: hidden;
+	transform: scale(0.8);
+	opacity: 0;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.note:hover .check-circle {
+	visibility: visible;
+	transform: scale(1);
+	opacity: 1;
+}
+
+/* Modal styles */
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+
+.modal .modal-content {
+	width: 589px;
+	position: relative;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.open-modal {
+	visibility: visible;
+}
+
+/* Animation styles */
+.note-archive-animation {
+	transform: scale(0.8);
+	opacity: 0;
+}
+
+/* Input focus styles */
+input:focus {
+	outline: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+	nav {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.search-area {
+		width: 100%;
+		margin: 10px 0;
+	}
+
+	.sidebar {
+		width: 60px;
+	}
+
+	.sidebar-hover {
+		width: 200px;
+	}
+
+	.sidebar .sidebar-item .sidebar-text {
+		display: none;
+	}
+
+	.form-container {
+		width: 90%;
+		margin: 20px auto;
+	}
+
+	.notes {
+		padding: 0 20px;
+	}
+
+	.note {
+		width: 90%;
+		margin: 10px auto;
+	}
+
+	.modal .modal-content {
+		width: 90%;
+	}
+}
+
+@media (max-width: 480px) {
+	nav {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.sidebar {
+		width: 50px;
+	}
+
+	.sidebar-hover {
+		width: 150px;
+	}
+
+	.form-container {
+		width: 95%;
+	}
+
+	.note {
+		width: 95%;
+	}
+
+	.modal .modal-content {
+		width: 95%;
+	}
+
+	.tooltip-text {
+		font-size: 0.6rem;
+	}
+}
+
